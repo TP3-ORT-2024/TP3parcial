@@ -6,4 +6,12 @@
     </style>
 
     <style name="Theme.TP3parcial" parent="Base.Theme.TP3parcial" />
+    <style name="CustomTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/soft_gray</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxCornerRadiusTopEnd">10dp</item>
+        <item name="boxCornerRadiusTopStart">10dp</item>
+        <item name="boxCornerRadiusBottomEnd">10dp</item>
+        <item name="boxCornerRadiusBottomStart">10dp</item>
+    </style>
 </resources>
