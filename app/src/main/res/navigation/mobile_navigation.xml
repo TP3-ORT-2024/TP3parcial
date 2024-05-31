@@ -6,8 +6,8 @@
     app:startDestination="@id/navigation_intro">
     <fragment
         android:id="@+id/navigation_intro"
-        android:name="com.example.IntroFragment"
-        android:label="@string/title_intro"
+        android:name="com.uno.tp3parcial.ui.IntroFragment.IntroFragment"
+        android:label="hola"
         tools:layout="@layout/fragment_intro" >
         <action
             android:id="@+id/action_navigation_intro_to_navigation_home"

@@ -52,4 +52,5 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation("com.github.bumptech.glide:glide:4.15.1")
     implementation("androidx.navigation:navigation-fragment-ktx:2.5.3")
+    implementation("androidx.fragment:fragment:1.7.1")
 }

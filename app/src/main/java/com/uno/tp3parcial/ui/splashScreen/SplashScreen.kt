@@ -6,6 +6,5 @@ import androidx.fragment.app.Fragment
 class SplashScreen : Fragment() {
 
 
-    private var _binding: FragmentIntroBinding? = null
 
 }
