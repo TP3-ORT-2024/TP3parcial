@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">TP3parcial</string>
+    <string name="title_explore">Explore</string>
+    <string name="title_search">Search</string>
+    <string name="title_offers">Offers</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_settings">Settings</string>
+    <color name="app_bg">#F7F8FA</color>
+    <color name="bottom_navbar_bg">#FEFEFE</color>
+    <color name="green">#41E813</color>
+    <color name="red">#E31A20</color>
+
 </resources>

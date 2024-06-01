@@ -6,4 +6,10 @@
     </style>
 
     <style name="Theme.TP3parcial" parent="Base.Theme.TP3parcial" />
+
+
+        <style name="BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+            //TODO - Set the color of the BottomNavigationView
+        </style>
+
 </resources>
