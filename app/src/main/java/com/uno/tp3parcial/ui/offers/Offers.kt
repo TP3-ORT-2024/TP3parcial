@@ -5,14 +5,21 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.uno.tp3parcial.R
+import com.uno.tp3parcial.ui.offers.adapters.OffersAdapter
+import com.uno.tp3parcial.ui.offers.entities.Offer
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-class Offers : Fragment() {
+class Offers : Fragment(R.layout.searchc) {
     private var param1: String? = null
     private var param2: String? = null
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var offerAdapter: OffersAdapter
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +27,23 @@ class Offers : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        recyclerView = view.findViewById(R.id.rvTasks)
+        recyclerView.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+
+        val ofertas = listOf(
+            Offer("Title 1", "Description 1"),
+            Offer("Title 2", "Description 2")
+        )
+
+        offerAdapter = OffersAdapter(ofertas)
+        recyclerView.adapter = offerAdapter
     }
 
     override fun onCreateView(
@@ -40,3 +64,5 @@ class Offers : Fragment() {
             }
     }
 }
+
+
