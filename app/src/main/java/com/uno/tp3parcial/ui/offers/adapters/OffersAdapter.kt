@@ -23,10 +23,7 @@ class OffersAdapter(private val items: List<Offer>) : RecyclerView.Adapter<Offer
     }
 
     override fun getItemCount() = items.size
-
-
 }
 
-data class Offer(val title: String, val description: String)
 
 
