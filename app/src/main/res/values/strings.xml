@@ -9,5 +9,21 @@
     <color name="bottom_navbar_bg">#FEFEFE</color>
     <color name="green">#41E813</color>
     <color name="red">#E31A20</color>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="settings">Settings</string>
+    <string name="referral_code">Referral Code</string>
+    <string name="logout">Logout</string>
+    <string name="payments_details">Payments Details</string>
+    <string name="todo">TODO</string>
+    <string name="macy_jhonson">Macy Jhonson</string>
+    <string name="baguio_philippines">Baguio, Philippines</string>
+    <string name="i_like_the_beach_mountains_and_everything_about_nature">I like the beach, mountains and everything about nature :)</string>
+    <string name="payment_details">Payment Details</string>
+    <string name="text_description">I like the beach, mountains and everything about nature :)</string>
+    <string name="location">Baguio, Philippines</string>
+    <string name="username">Macy Jhonson</string>
+    <string name="generales">Generales</string>
+    <string name="modo_oscuro">Modo Oscuro</string>
 
 </resources>
