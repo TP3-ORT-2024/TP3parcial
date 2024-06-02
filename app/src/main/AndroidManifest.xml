@@ -16,8 +16,7 @@
             android:name=".todoapp.Menu"
             android:exported="false" />
         <activity
-            android:name=".Settings.SettingsActivity"
-            android:exported="false"
+            android:name=".SettingsActivity"
             android:label="@string/title_activity_settings_view" />
         <activity
             android:name=".MainActivity"

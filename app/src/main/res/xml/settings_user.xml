@@ -2,37 +2,17 @@
 <PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <PreferenceCategory android:title="Configuración General">
+    <PreferenceCategory android:title="Generales"
+        >
 
     </PreferenceCategory>
-    <CheckBoxPreference
-        android:defaultValue="false"
-        android:key="check_box_preference_1"
-        android:title="Check box preference" />
 
-
-    <EditTextPreference
-        android:defaultValue="Default value"
-        android:key="edit_text_preference_1"
-        android:selectAllOnFocus="true"
-        android:singleLine="true"
-        android:title="Edit text preference" />
-    <SwitchPreference
-        android:defaultValue="false"
-        android:key="switch_preference_1"
-        android:title="Switch preference" />
     <SwitchPreference
         android:defaultValue="false"
         android:key="night_mode_2"
-        android:title="Modo Nocturno"
-        app:summary="explica para que se usa esta configuración" />
-    <PreferenceCategory android:title="Configuración de Usuario">
+        android:title="Modo Oscuro"
+         />
 
-    </PreferenceCategory>
-    <EditTextPreference
-        android:defaultValue="Default value"
-        android:key="edit_text_preference_2"
-        android:selectAllOnFocus="true"
-        android:singleLine="true"
-        android:title="Edit text preference" />
+
+
 </PreferenceScreen>
