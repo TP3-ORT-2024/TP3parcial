@@ -4,5 +4,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="soft_gray">#F8F9FB</color>
     <color name="orange">#F99A0E</color>
-    <color name="red">#FF0000</color>
+    <color name="app_bg">#F7F8FA</color>
+    <color name="bottom_navbar_bg">#FEFEFE</color>
+    <color name="green">#41E813</color>
+    <color name="red">#E31A20</color>
 </resources>
