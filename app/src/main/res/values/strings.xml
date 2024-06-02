@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">TP3parcial</string>
     <string name="search_button">Search</string>
+    <string name="select_dpt">Select Departure</string>
+    <string name="select_arr">Select Arrival</string>
+    <string name="select_date">Select Date</string>
+    <string name="pass_number">1 Adult</string>
+    <string name="economy_text">Economy</string>
 </resources>
