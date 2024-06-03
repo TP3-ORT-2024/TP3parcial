@@ -7,8 +7,6 @@
     android:layout_height="match_parent"
     tools:context="com.uno.tp3parcial.ui.profile.Profile">
 
-    <!-- android:background="@drawable/background" -->
-
     <ImageView
         android:id="@+id/backgroundprofile"
         android:layout_width="match_parent"

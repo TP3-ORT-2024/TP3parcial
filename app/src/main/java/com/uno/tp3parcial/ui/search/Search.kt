@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import androidx.navigation.fragment.findNavController
@@ -41,12 +42,11 @@ class Search : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         val view = inflater.inflate(layout.searchc, container, false)
 
-        // Initialize the RecyclerView
-        recyclerView = view.findViewById(R.id.recViewOffers) // Make sure the ID matches your layout
-        recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        recyclerView = view.findViewById(R.id.recViewOffers)
+        recyclerView.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
 
         val titleMastercard = getString(R.string.offers_rv_tiitulo_mastecard)
@@ -57,21 +57,23 @@ class Search : Fragment() {
 
 
         val ofertas = listOf(
-            Offer(titleMastercard, limitedOffer,imageMastercard),
-            Offer(titleVisa, limitedOffer,imageVisa)
+            Offer(titleMastercard, limitedOffer, imageMastercard),
+            Offer(titleVisa, limitedOffer, imageVisa)
         )
 
-        // Initialize the adapter
-        offerAdapter = OffersAdapter(ofertas) // Pass an empty list or your data here
+        offerAdapter = OffersAdapter(ofertas)
 
-        // Set the adapter to the RecyclerView
         recyclerView.adapter = offerAdapter
-
 
 
         val inputDate = view.findViewById<EditText>(R.id.input_date)
         inputDate.setOnClickListener {
             showDatePickerDialog()
+        }
+
+        val backButton = view.findViewById<ImageButton>(R.id.back_button)
+        backButton.setOnClickListener {
+            parentFragmentManager.popBackStack()
         }
 
         return view
@@ -83,7 +85,6 @@ class Search : Fragment() {
         val datePicker = builder.build()
 
         datePicker.addOnPositiveButtonClickListener { selection ->
-            // Update the EditText with the selected date
             val editText = view?.findViewById<EditText>(R.id.input_date)
             editText?.setText(datePicker.getHeaderText())
         }

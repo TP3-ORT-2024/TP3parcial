@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
+import androidx.navigation.fragment.findNavController
 import com.uno.tp3parcial.R
 
 private const val ARG_PARAM1 = "param1"
@@ -29,8 +31,20 @@ class Explore : Fragment() {
         return inflater.inflate(R.layout.explore, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val hamburgerMenu: ImageButton = view.findViewById(R.id.hamburger_menu)
+        hamburgerMenu.setOnClickListener {
+            findNavController().navigate(R.id.action_exploreFragment_to_drawerMenuFragment)
+        }
+
+    }
+
+
     companion object {
         @JvmStatic
+
         fun newInstance(param1: String, param2: String) =
             Explore().apply {
                 arguments = Bundle().apply {

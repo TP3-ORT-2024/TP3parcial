@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import com.uno.tp3parcial.R
 
 private const val ARG_PARAM1 = "param1"
@@ -28,7 +29,12 @@ class Offers : Fragment(R.layout.searchc) {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.offers, container, false)
+        val view = inflater.inflate(R.layout.offers, container, false)
+        val backButton = view.findViewById<ImageButton>(R.id.back_button)
+        backButton.setOnClickListener {
+            parentFragmentManager.popBackStack()
+        }
+        return view
     }
 
     companion object {
