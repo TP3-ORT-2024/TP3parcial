@@ -10,7 +10,7 @@ import com.uno.tp3parcial.ui.destination.holders.DestinationViewHolder
 class DestinationAdapter(private val items: List<Destination>) : RecyclerView.Adapter<DestinationViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DestinationViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_offer, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_destination, parent, false)
         return DestinationViewHolder(itemView)
     }
 
