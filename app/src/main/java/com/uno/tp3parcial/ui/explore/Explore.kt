@@ -44,7 +44,10 @@ class Explore : Fragment() {
 
 
 
-        val imageMastercard: Int = R.drawable.ic_mastercard
+        val imageBoracay: Int = R.drawable.boracay
+        val imageBaros: Int = R.drawable.baros
+        val imageBali: Int = R.drawable.bali
+        val imagePalawan: Int = R.drawable.palawan
 
         val locationOne = getString(R.string.locationOne)
         val locationTwo = getString(R.string.locationTwo)
@@ -57,10 +60,10 @@ class Explore : Fragment() {
         val countryFour = getString(R.string.countryFour)
 
         val destinations = listOf(
-            Destination(locationOne, countryOne,imageMastercard),
-            Destination(locationTwo, countryTwo,imageMastercard),
-            Destination(locationThree, countryThree,imageMastercard),
-            Destination(locationFour, countryFour,imageMastercard),
+            Destination(locationOne, countryOne,imageBoracay),
+            Destination(locationTwo, countryTwo,imageBaros),
+            Destination(locationThree, countryThree,imageBali),
+            Destination(locationFour, countryFour,imagePalawan),
         )
 
         destinationAdapter = DestinationAdapter(destinations)
