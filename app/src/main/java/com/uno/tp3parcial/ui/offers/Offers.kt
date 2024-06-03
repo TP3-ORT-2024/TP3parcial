@@ -10,9 +10,10 @@ import com.uno.tp3parcial.R
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-class Offers : Fragment() {
+class Offers : Fragment(R.layout.searchc) {
     private var param1: String? = null
     private var param2: String? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +21,7 @@ class Offers : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
     }
 
     override fun onCreateView(
@@ -40,3 +42,5 @@ class Offers : Fragment() {
             }
     }
 }
+
+

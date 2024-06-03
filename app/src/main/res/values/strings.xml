@@ -1,15 +1,27 @@
 <resources>
     <string name="app_name">TP3parcial</string>
+
+    <string name="search_button">Search</string>
+    <string name="select_dpt">Select Departure</string>
+    <string name="select_arr">Select Arrival</string>
+    <string name="select_date">Select Date</string>
+    <string name="pass_number">1 Adult</string>
+    <string name="economy_text">Economy</string>
+
     <string name="title_explore">Explore</string>
     <string name="title_search">Search</string>
     <string name="title_offers">Offers</string>
     <string name="title_profile">Profile</string>
     <string name="title_settings">Settings</string>
-    <color name="app_bg">#F7F8FA</color>
-    <color name="bottom_navbar_bg">#FEFEFE</color>
-    <color name="green">#41E813</color>
-    <color name="red">#E31A20</color>
-    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="offers_rv_tiitulo_mastecard">20% discount for mastecard users</string>
+    <string name="offers_rv_tiitulo_visa">25% discount with your Visa credit cards</string>
+    <string name="offers_rv_limited">Limited time offer!</string>
+
+    <string name="one_way_text">One way</string>
+    <string name="round_trip_text">Round trip</string>
+
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="settings">Settings</string>
     <string name="referral_code">Referral Code</string>
@@ -25,5 +37,6 @@
     <string name="username">Macy Jhonson</string>
     <string name="generales">Generales</string>
     <string name="modo_oscuro">Modo Oscuro</string>
+
 
 </resources>
