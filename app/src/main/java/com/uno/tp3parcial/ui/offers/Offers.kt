@@ -24,7 +24,6 @@ class Offers : Fragment(R.layout.searchc) {
 
     }
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

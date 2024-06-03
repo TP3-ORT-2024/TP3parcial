@@ -20,6 +20,7 @@ class OffersAdapter(private val items: List<Offer>) : RecyclerView.Adapter<Offer
         val currentItem = items[position]
         holder.tvTitle.text = currentItem.titulo
         holder.tvDescription.text = currentItem.descripcion
+        holder.ivImage.setImageResource(currentItem.imagen)
     }
 
     override fun getItemCount() = items.size

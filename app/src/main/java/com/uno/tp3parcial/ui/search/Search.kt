@@ -5,9 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.RadioGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.datepicker.MaterialDatePicker
@@ -50,10 +52,13 @@ class Search : Fragment() {
         val titleMastercard = getString(R.string.offers_rv_tiitulo_mastecard)
         val titleVisa = getString(R.string.offers_rv_tiitulo_visa)
         val limitedOffer = getString(R.string.offers_rv_limited)
+        val imageMastercard: Int = R.drawable.ic_mastercard
+        val imageVisa: Int = R.drawable.ic_visa
+
 
         val ofertas = listOf(
-            Offer(titleMastercard, limitedOffer),
-            Offer(titleVisa, limitedOffer)
+            Offer(titleMastercard, limitedOffer,imageMastercard),
+            Offer(titleVisa, limitedOffer,imageVisa)
         )
 
         // Initialize the adapter
@@ -62,28 +67,13 @@ class Search : Fragment() {
         // Set the adapter to the RecyclerView
         recyclerView.adapter = offerAdapter
 
-        val toggleGroup = view.findViewById<RadioGroup>(R.id.toggleGroup)
-        val oneWayButton = view.findViewById<RadioButton>(R.id.oneWay)
-        val roundTripButton = view.findViewById<RadioButton>(R.id.roundTrip)
 
-        toggleGroup.setOnCheckedChangeListener { group, checkedId ->
-            when (checkedId) {
-                R.id.oneWay -> {
-                    // Handle one way selected
-                }
-                R.id.roundTrip -> {
-                    // Handle round trip selected
-                }
-            }
-        }
-
-        // Set initial state if needed
-        oneWayButton.isChecked = true
 
         val inputDate = view.findViewById<EditText>(R.id.input_date)
         inputDate.setOnClickListener {
             showDatePickerDialog()
         }
+
         return view
     }
 

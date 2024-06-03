@@ -21,6 +21,14 @@
         <style name="BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
             //TODO - Set the color of the BottomNavigationView
         </style>
-
+    <style name="tabs_style">
+        <item name="tabBackground">@drawable/tab_selector</item>
+        <item name="tabSelectedTextColor">@color/white</item>
+        <item name="background">@color/selected_color</item>
+        <item name= "android:layout_marginStart">8dp</item>
+        <item name= "android:layout_marginTop">16dp</item>
+        <item name= "android:layout_marginEnd">8dp</item>
+        <item name= "android:layout_marginBottom">16dp</item>
+    </style>
 
 </resources>
