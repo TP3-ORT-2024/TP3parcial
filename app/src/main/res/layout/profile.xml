@@ -32,6 +32,7 @@
         android:textStyle="bold"
         android:textSize="30sp"
         android:layout_marginTop="305dp"/>
+
     <TextView
         android:id="@+id/location"
         android:layout_width="match_parent"
@@ -41,6 +42,7 @@
         android:textSize="20sp"
         android:layout_marginTop="340dp"/>
     <TextView
+
         android:id="@+id/description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -124,12 +126,15 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:padding="16dp">
 
+
                 <ImageButton
                     android:id="@+id/settingsButton"
+
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -178,8 +183,6 @@
 
 
 </FrameLayout>
-
-
 
 
 

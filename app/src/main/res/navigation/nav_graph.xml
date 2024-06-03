@@ -23,7 +23,7 @@
         android:id="@+id/search"
         android:name="com.uno.tp3parcial.ui.search.Search"
         android:label="@string/title_search"
-        tools:layout="@layout/search" />
+        tools:layout="@layout/search_result" />
     <fragment
         android:id="@+id/offers"
         android:name="com.uno.tp3parcial.ui.offers.Offers"
@@ -38,6 +38,7 @@
             android:id="@+id/action_profile_to_settings"
             app:destination="@id/settings" />
     </fragment>
+
     <fragment
         android:id="@+id/settings"
         android:name="com.uno.tp3parcial.ui.settings.Settings"
