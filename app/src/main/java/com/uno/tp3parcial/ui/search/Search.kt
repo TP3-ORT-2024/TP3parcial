@@ -19,6 +19,7 @@ import com.uno.tp3parcial.R
 import com.uno.tp3parcial.R.*
 import com.uno.tp3parcial.ui.offers.adapters.OffersAdapter
 import com.uno.tp3parcial.ui.offers.entities.Offer
+import com.uno.tp3parcial.ui.search_result.Search_Result
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -75,6 +76,12 @@ class Search : Fragment() {
         backButton.setOnClickListener {
             parentFragmentManager.popBackStack()
         }
+
+        val searchButton = view.findViewById<Button>(R.id.search_button)
+        searchButton.setOnClickListener {
+            findNavController().navigate(R.id.action_searchFragment_to_searchResultFragment)
+        }
+
 
         return view
     }
