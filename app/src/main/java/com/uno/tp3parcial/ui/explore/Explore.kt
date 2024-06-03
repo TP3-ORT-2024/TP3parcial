@@ -5,7 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.uno.tp3parcial.R
+import com.uno.tp3parcial.R.*
+import com.uno.tp3parcial.ui.destination.adapters.DestinationAdapter
+import com.uno.tp3parcial.ui.destination.entities.Destination
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -13,6 +18,9 @@ private const val ARG_PARAM2 = "param2"
 class Explore : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
+
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var destinationAdapter: DestinationAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,8 +34,42 @@ class Explore : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.explore, container, false)
+        // Inflate the layout for this fragment
+        val view = inflater.inflate(layout.explore, container, false)
+
+        // Initialize the RecyclerView
+        recyclerView = view.findViewById(R.id.recViewOffers) // Make sure the ID matches your layout
+        recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+
+
+
+
+        val imageMastercard: Int = R.drawable.ic_mastercard
+
+        val locationOne = getString(R.string.locationOne)
+        val locationTwo = getString(R.string.locationTwo)
+        val locationThree = getString(R.string.locationThree)
+        val locationFour = getString(R.string.locationFour)
+
+        val countryOne = getString(R.string.countryOne)
+        val countryTwo = getString(R.string.countryTwo)
+        val countryThree = getString(R.string.countryThree)
+        val countryFour = getString(R.string.countryFour)
+
+        val destinations = listOf(
+            Destination(locationOne, countryOne,imageMastercard),
+            Destination(locationTwo, countryTwo,imageMastercard),
+            Destination(locationThree, countryThree,imageMastercard),
+            Destination(locationFour, countryFour,imageMastercard),
+        )
+
+        destinationAdapter = DestinationAdapter(destinations)
+        recyclerView.adapter = destinationAdapter
+
+        return view
     }
+
+
 
     companion object {
         @JvmStatic
@@ -39,4 +81,6 @@ class Explore : Fragment() {
                 }
             }
     }
+
+
 }
