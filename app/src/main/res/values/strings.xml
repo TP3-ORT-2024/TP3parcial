@@ -38,9 +38,15 @@
     <string name="generales">Generales</string>
     <string name="modo_oscuro">Modo Oscuro</string>
 
+    <!-- Explore -->
+    <string name="title_flight">Flight</string>
+
+
+
 
     <!-- Destinations -->
     <string name="title_destinations">Trending destinations</string>
+    <string name="title_display_all">See all</string>
 
     <string name="locationOne">Boracay</string>
     <string name="locationTwo">Baros</string>

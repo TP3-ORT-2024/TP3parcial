@@ -11,6 +11,8 @@ import com.uno.tp3parcial.R
 import com.uno.tp3parcial.R.*
 import com.uno.tp3parcial.ui.destination.adapters.DestinationAdapter
 import com.uno.tp3parcial.ui.destination.entities.Destination
+import com.uno.tp3parcial.ui.offers.adapters.OffersAdapter
+import com.uno.tp3parcial.ui.offers.entities.Offer
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -20,7 +22,9 @@ class Explore : Fragment() {
     private var param2: String? = null
 
     private lateinit var recyclerView: RecyclerView
+    private lateinit var offersRecyclerView: RecyclerView
     private lateinit var destinationAdapter: DestinationAdapter
+    private lateinit var offerAdapter: OffersAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,8 +42,11 @@ class Explore : Fragment() {
         val view = inflater.inflate(layout.explore, container, false)
 
         // Initialize the RecyclerView
-        recyclerView = view.findViewById(R.id.recViewOffers) // Make sure the ID matches your layout
+        recyclerView = view.findViewById(R.id.recViewDestinations)
         recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+
+        offersRecyclerView = view.findViewById(R.id.recViewOffers)
+        offersRecyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
 
 
@@ -70,6 +77,22 @@ class Explore : Fragment() {
             Destination(locationThree, countryThree,imageBali, destinationIDThree),
             Destination(locationFour, countryFour,imagePalawan, destinationIDFour),
         )
+
+
+        val titleMastercard = getString(R.string.offers_rv_tiitulo_mastecard)
+        val titleVisa = getString(R.string.offers_rv_tiitulo_visa)
+        val limitedOffer = getString(R.string.offers_rv_limited)
+        val imageMastercard: Int = R.drawable.ic_mastercard
+        val imageVisa: Int = R.drawable.ic_visa
+
+
+        val ofertas = listOf(
+            Offer(titleMastercard, limitedOffer,imageMastercard),
+            Offer(titleVisa, limitedOffer,imageVisa)
+        )
+
+        offerAdapter = OffersAdapter(ofertas)
+        offersRecyclerView.adapter = offerAdapter
 
         destinationAdapter = DestinationAdapter(destinations)
         recyclerView.adapter = destinationAdapter

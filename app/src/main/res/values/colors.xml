@@ -9,6 +9,8 @@
     <color name="green">#41E813</color>
     <color name="red">#E31A20</color>
     <color name="blue">#1262AE</color>
+    <color name="accent_color">#1262AE</color>
     <color name="unselected_color">#9EAAB6</color>
     <color name="selected_color">#9EAAB6</color>
+    <color name="violet">#5443CA</color>
 </resources>
