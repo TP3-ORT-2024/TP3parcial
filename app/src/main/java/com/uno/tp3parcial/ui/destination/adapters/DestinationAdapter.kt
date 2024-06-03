@@ -19,6 +19,7 @@ class DestinationAdapter(private val items: List<Destination>) : RecyclerView.Ad
         holder.tvTitle.text = currentItem.titulo
         holder.tvDescription.text = currentItem.descripcion
         holder.ivImage.setImageResource(currentItem.imagen)
+        holder.destinationID.text = currentItem.destinationID
     }
 
     override fun getItemCount() = items.size

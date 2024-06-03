@@ -59,11 +59,16 @@ class Explore : Fragment() {
         val countryThree = getString(R.string.countryThree)
         val countryFour = getString(R.string.countryFour)
 
+        val destinationIDOne = getString(R.string.destinationIDOne)
+        val destinationIDTwo = getString(R.string.destinationIDTwo)
+        val destinationIDThree = getString(R.string.destinationIDThree)
+        val destinationIDFour = getString(R.string.destinationIDFour)
+
         val destinations = listOf(
-            Destination(locationOne, countryOne,imageBoracay),
-            Destination(locationTwo, countryTwo,imageBaros),
-            Destination(locationThree, countryThree,imageBali),
-            Destination(locationFour, countryFour,imagePalawan),
+            Destination(locationOne, countryOne,imageBoracay, destinationIDOne),
+            Destination(locationTwo, countryTwo,imageBaros, destinationIDTwo),
+            Destination(locationThree, countryThree,imageBali, destinationIDThree),
+            Destination(locationFour, countryFour,imagePalawan, destinationIDFour),
         )
 
         destinationAdapter = DestinationAdapter(destinations)

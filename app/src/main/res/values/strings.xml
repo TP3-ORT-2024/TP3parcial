@@ -47,10 +47,10 @@
     <string name="locationThree">Bali</string>
     <string name="locationFour">Palawan</string>
 
-    <string name="locationIdOne">5D4N</string>
-    <string name="locationIdTwo">7D6N</string>
-    <string name="locationIdThree">3D2N</string>
-    <string name="locationIdFour">3D2N</string>
+    <string name="destinationIDOne">5D4N</string>
+    <string name="destinationIDTwo">7D6N</string>
+    <string name="destinationIDThree">3D2N</string>
+    <string name="destinationIDFour">3D2N</string>
 
     <string name="countryOne">Philippines</string>
     <string name="countryTwo">Maldives</string>
