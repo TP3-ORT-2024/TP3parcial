@@ -33,7 +33,12 @@
         android:id="@+id/profile"
         android:name="com.uno.tp3parcial.ui.profile.Profile"
         android:label="@string/title_profile"
-        tools:layout="@layout/profile" />
+        tools:layout="@layout/profile" >
+        <action
+            android:id="@+id/action_profile_to_settings"
+            app:destination="@id/settings" />
+    </fragment>
+
     <fragment
         android:id="@+id/settings"
         android:name="com.uno.tp3parcial.ui.settings.Settings"
