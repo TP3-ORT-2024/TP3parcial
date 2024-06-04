@@ -33,7 +33,7 @@
         android:id="@+id/profile"
         android:name="com.uno.tp3parcial.ui.profile.Profile"
         android:label="@string/title_profile"
-        tools:layout="@layout/profile" >
+        tools:layout="@layout/profile">
         <action
             android:id="@+id/action_profile_to_settings"
             app:destination="@id/settings" />
@@ -43,7 +43,12 @@
         android:id="@+id/settings"
         android:name="com.uno.tp3parcial.ui.settings.Settings"
         android:label="@string/title_settings"
-        tools:layout="@layout/settings" />
+        tools:layout="@layout/settings">
+        <action
+            android:id="@+id/action_settingFragment_to_drawerMenuFragment"
+            app:destination="@id/drawerMenuFragment" />
+    </fragment>
+
     <fragment
         android:id="@+id/drawerMenuFragment"
         android:name="com.uno.tp3parcial.ui.drawer_menu.DrawerMenu"
@@ -53,10 +58,10 @@
         android:id="@+id/searchResultFragment"
         android:name="com.uno.tp3parcial.ui.search_result.Search_Result"
         android:label="Search Result"
-        tools:layout="@layout/search_result"/>
-        <action
-            android:id="@+id/action_search_to_borocay"
-            app:destination="@id/borocay" />
+        tools:layout="@layout/search_result" />
+    <action
+        android:id="@+id/action_search_to_borocay"
+        app:destination="@id/borocay" />
     <fragment
         android:id="@+id/borocay"
         android:name="com.uno.tp3parcial.ui.borocay.Borocay"

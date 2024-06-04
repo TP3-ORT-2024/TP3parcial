@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -37,19 +38,18 @@ class Search_Result : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         // Inflate the layout for this fragment
-         val view = inflater.inflate(R.layout.search_result, container, false)
+        val view = inflater.inflate(R.layout.search_result, container, false)
 
         // Initialize the RecyclerView
-        recyclerView = view.findViewById(R.id.recViewSearchR) // Make sure the ID matches your layout
-        recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-
+        recyclerView =
+            view.findViewById(R.id.recViewSearchR) // Make sure the ID matches your layout
+        recyclerView.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
 
 
         val filipinas1: Int = R.drawable.filipinas1
         val filipinas2: Int = R.drawable.filipinas2
         val filipinas3: Int = R.drawable.filipinas3
-
-
 
 
         val imagen = listOf(
@@ -67,10 +67,13 @@ class Search_Result : Fragment() {
         val view2 = inflater.inflate(R.layout.item_vuelo_searchr, container, false)
 
         val searchButton = view2.findViewById<Button>(R.id.view_details_btn)
-           searchButton.setOnClickListener {
-           findNavController().navigate(R.id.action_search_to_borocay)
+        searchButton.setOnClickListener {
+            findNavController().navigate(R.id.action_search_to_borocay)
         }
-
+        val backButton = view.findViewById<ImageButton>(R.id.back_button)
+        backButton.setOnClickListener {
+            parentFragmentManager.popBackStack()
+        }
 
         // return inflater.inflate(R.layout.search_result, container, false)
         return view
