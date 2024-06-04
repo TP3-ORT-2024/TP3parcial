@@ -40,26 +40,23 @@ class Profile : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.profile, container, false)
 
+        val settingsButton = view.findViewById<ImageButton>(R.id.settingsButton)
+
+        settingsButton.setOnClickListener {
+            findNavController().navigate(R.id.action_profile_to_settings)
+
+        }
+
 
         val backButton = view.findViewById<ImageButton>(R.id.back_button)
         backButton.setOnClickListener {
             parentFragmentManager.popBackStack()
 
-
-        // Obtener NavController
-       // navController = findNavController()
-
-        // Manejador de clic del icono de configuración
-
-        //val settingsButton = view.findViewById<ImageButton>(R.id.settingsButton)
-
-        //settingsButton.setOnClickListener {
-          //  navController.navigate(R.id.action_profile_to_settings)
-         
-        //}
+        }
 
         return view
     }
+
 
     companion object {
         @JvmStatic
@@ -74,3 +71,5 @@ class Profile : Fragment() {
 
 
 }
+
+
