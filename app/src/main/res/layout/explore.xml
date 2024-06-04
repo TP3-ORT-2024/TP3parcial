@@ -58,16 +58,14 @@
         android:paddingBottom="20dp"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
-    <Button
+    <ImageButton
         android:id="@+id/flight_button"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:backgroundTint="@color/violet"
-        android:icon="@drawable/ic_airplane"
+        android:src="@drawable/ic_airplane"
         android:textColor="@color/white"
         android:textSize="15sp"
-        app:cornerRadius="10dp"
-        android:paddingBottom="20dp"
         app:fontFamily="@font/inter_bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

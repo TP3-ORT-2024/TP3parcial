@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import android.widget.ImageButton
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -38,6 +39,7 @@ class Search_Result : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         // Inflate the layout for this fragment
+
         val view = inflater.inflate(R.layout.search_result, container, false)
 
         // Initialize the RecyclerView
@@ -67,6 +69,7 @@ class Search_Result : Fragment() {
         val view2 = inflater.inflate(R.layout.item_vuelo_searchr, container, false)
 
         val searchButton = view2.findViewById<Button>(R.id.view_details_btn)
+
         searchButton.setOnClickListener {
             findNavController().navigate(R.id.action_search_to_borocay)
         }

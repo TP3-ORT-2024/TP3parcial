@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/grp1" >
+        <item
+            android:id="@+id/subtitle"
+            android:title="DC">
+            <menu>
+                <item
+                    android:id="@+id/batman"
+                    android:icon="@drawable/airplanelanding"
+                    android:title="Batman" />
+                <item
+                    android:id="@+id/joker"
+                    android:icon="@drawable/airplanelanding"
+                    android:title="Joker" />
+                <item
+                    android:id="@+id/penguin"
+                    android:icon="@drawable/airplanelanding"
+                    android:title="Penguin" />
+            </menu>
+        </item>
+        <item
+            android:id="@+id/marvel"
+            android:title="Marvel">
+            <menu>
+                <item
+                    android:id="@+id/wolverine"
+                    android:icon="@drawable/airplanelanding"
+                    android:title="Wolverine" />
+            </menu>
+        </item>
+    </group>
+
+</menu>
