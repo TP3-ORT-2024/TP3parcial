@@ -39,5 +39,30 @@
     <string name="generales">Generales</string>
     <string name="modo_oscuro">Modo Oscuro</string>
 
+    <!-- Explore -->
+    <string name="title_flight">Flight</string>
+
+
+
+
+    <!-- Destinations -->
+    <string name="title_destinations">Trending destinations</string>
+    <string name="title_display_all">See all</string>
+
+    <string name="locationOne">Boracay</string>
+    <string name="locationTwo">Baros</string>
+    <string name="locationThree">Bali</string>
+    <string name="locationFour">Palawan</string>
+
+    <string name="destinationIDOne">5D4N</string>
+    <string name="destinationIDTwo">7D6N</string>
+    <string name="destinationIDThree">3D2N</string>
+    <string name="destinationIDFour">3D2N</string>
+
+    <string name="countryOne">Philippines</string>
+    <string name="countryTwo">Maldives</string>
+    <string name="countryThree">Indonesia</string>
+    <string name="countryFour">Philippines</string>
+
 
 </resources>
