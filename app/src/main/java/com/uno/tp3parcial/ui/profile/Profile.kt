@@ -5,10 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
+
 import android.widget.ImageButton
+
+import android.widget.Button
+
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
+
 import com.uno.tp3parcial.R
 import com.uno.tp3parcial.R.id.settings
 
@@ -36,18 +40,23 @@ class Profile : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.profile, container, false)
 
-        // ...
+
+        val backButton = view.findViewById<ImageButton>(R.id.back_button)
+        backButton.setOnClickListener {
+            parentFragmentManager.popBackStack()
+
 
         // Obtener NavController
-        navController = findNavController()
+       // navController = findNavController()
 
         // Manejador de clic del icono de configuración
 
-        val settingsButton = view.findViewById<ImageButton>(R.id.settingsButton)
+        //val settingsButton = view.findViewById<ImageButton>(R.id.settingsButton)
 
-        settingsButton.setOnClickListener {
-            navController.navigate(R.id.action_profile_to_settings)
-        }
+        //settingsButton.setOnClickListener {
+          //  navController.navigate(R.id.action_profile_to_settings)
+         
+        //}
 
         return view
     }

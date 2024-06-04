@@ -4,31 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/explore">
+
     <fragment
         android:id="@+id/explore"
         android:name="com.uno.tp3parcial.ui.explore.Explore"
         android:label="@string/title_explore"
-        tools:layout="@layout/explore" >
+        tools:layout="@layout/explore">
         <action
-            android:id="@+id/action_explore_to_search"
-            app:destination="@id/search" />
-        <action
-            android:id="@+id/action_explore_to_offers"
-            app:destination="@id/offers" />
-        <action
-            android:id="@+id/action_explore_to_profile"
-            app:destination="@id/profile" />
+            android:id="@+id/action_exploreFragment_to_drawerMenuFragment"
+            app:destination="@id/drawerMenuFragment" />
     </fragment>
     <fragment
         android:id="@+id/search"
         android:name="com.uno.tp3parcial.ui.search.Search"
         android:label="@string/title_search"
-        tools:layout="@layout/search_result" />
+        tools:layout="@layout/searchc">
+        <action
+            android:id="@+id/action_searchFragment_to_searchResultFragment"
+            app:destination="@id/searchResultFragment" />
+    </fragment>
+
     <fragment
         android:id="@+id/offers"
         android:name="com.uno.tp3parcial.ui.offers.Offers"
         android:label="@string/title_offers"
-        tools:layout="@layout/explore" />
+        tools:layout="@layout/offers" />
     <fragment
         android:id="@+id/profile"
         android:name="com.uno.tp3parcial.ui.profile.Profile"
@@ -44,4 +44,14 @@
         android:name="com.uno.tp3parcial.ui.settings.Settings"
         android:label="@string/title_settings"
         tools:layout="@layout/settings" />
+    <fragment
+        android:id="@+id/drawerMenuFragment"
+        android:name="com.uno.tp3parcial.ui.drawer_menu.DrawerMenu"
+        android:label="Drawer Menu"
+        tools:layout="@layout/drawer_menu" />
+    <fragment
+        android:id="@+id/searchResultFragment"
+        android:name="com.uno.tp3parcial.ui.search_result.Search_Result"
+        android:label="Search Result"
+        tools:layout="@layout/search_result"/>
 </navigation>
