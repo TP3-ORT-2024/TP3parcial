@@ -6,6 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import android.widget.ImageButton
+import android.widget.RadioButton
+import android.widget.RadioGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.datepicker.MaterialDatePicker
@@ -13,6 +17,7 @@ import com.uno.tp3parcial.R
 import com.uno.tp3parcial.R.*
 import com.uno.tp3parcial.ui.offers.adapters.OffersAdapter
 import com.uno.tp3parcial.ui.offers.entities.Offer
+import com.uno.tp3parcial.ui.search_result.Search_Result
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -36,12 +41,11 @@ class Search : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         val view = inflater.inflate(layout.searchc, container, false)
 
-        // Initialize the RecyclerView
-        recyclerView = view.findViewById(R.id.recViewOffers) // Make sure the ID matches your layout
-        recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        recyclerView = view.findViewById(R.id.recViewOffers)
+        recyclerView.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
 
         val titleMastercard = getString(R.string.offers_rv_tiitulo_mastecard)
@@ -52,22 +56,30 @@ class Search : Fragment() {
 
 
         val ofertas = listOf(
-            Offer(titleMastercard, limitedOffer,imageMastercard),
-            Offer(titleVisa, limitedOffer,imageVisa)
+            Offer(titleMastercard, limitedOffer, imageMastercard),
+            Offer(titleVisa, limitedOffer, imageVisa)
         )
 
-        // Initialize the adapter
-        offerAdapter = OffersAdapter(ofertas) // Pass an empty list or your data here
+        offerAdapter = OffersAdapter(ofertas)
 
-        // Set the adapter to the RecyclerView
         recyclerView.adapter = offerAdapter
-
 
 
         val inputDate = view.findViewById<EditText>(R.id.input_date)
         inputDate.setOnClickListener {
             showDatePickerDialog()
         }
+
+        val backButton = view.findViewById<ImageButton>(R.id.back_button)
+        backButton.setOnClickListener {
+            parentFragmentManager.popBackStack()
+        }
+
+        val searchButton = view.findViewById<Button>(R.id.search_button)
+        searchButton.setOnClickListener {
+            findNavController().navigate(R.id.action_searchFragment_to_searchResultFragment)
+        }
+
 
         return view
     }
@@ -78,7 +90,6 @@ class Search : Fragment() {
         val datePicker = builder.build()
 
         datePicker.addOnPositiveButtonClickListener { selection ->
-            // Update the EditText with the selected date
             val editText = view?.findViewById<EditText>(R.id.input_date)
             editText?.setText(datePicker.getHeaderText())
         }

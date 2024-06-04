@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import android.widget.ImageButton
+import androidx.navigation.fragment.findNavController
 import com.uno.tp3parcial.R
 import com.uno.tp3parcial.R.*
 import com.uno.tp3parcial.ui.destination.adapters.DestinationAdapter
@@ -100,10 +102,19 @@ class Explore : Fragment() {
         return view
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
+        val hamburgerMenu: ImageButton = view.findViewById(R.id.hamburger_menu)
+        hamburgerMenu.setOnClickListener {
+            findNavController().navigate(R.id.action_exploreFragment_to_drawerMenuFragment)
+        }
+
+    }
 
     companion object {
         @JvmStatic
+
         fun newInstance(param1: String, param2: String) =
             Explore().apply {
                 arguments = Bundle().apply {
