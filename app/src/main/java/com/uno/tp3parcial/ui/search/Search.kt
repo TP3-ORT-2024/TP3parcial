@@ -14,7 +14,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.datepicker.MaterialDatePicker
-import com.google.android.material.textfield.TextInputLayout
 import com.uno.tp3parcial.R
 import com.uno.tp3parcial.R.*
 import com.uno.tp3parcial.ui.offers.adapters.OffersAdapter

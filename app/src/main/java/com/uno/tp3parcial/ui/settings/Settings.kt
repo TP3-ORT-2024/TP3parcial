@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import androidx.appcompat.widget.SwitchCompat
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.uno.tp3parcial.R
 import com.uno.tp3parcial.ui.shared_view_model.SharedViewModel
 
@@ -41,7 +42,10 @@ class Settings : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.settings, container, false)
-
+        val hamburgerMenu: ImageButton = view.findViewById(R.id.hamburger_menu)
+        hamburgerMenu.setOnClickListener {
+            findNavController().navigate(R.id.action_settingFragment_to_drawerMenuFragment)
+        }
 
         return view
     }

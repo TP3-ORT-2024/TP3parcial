@@ -62,10 +62,10 @@
         android:layout_marginTop="305dp"
         android:padding="8dp"
         android:text="@string/username"
+        android:fontFamily="@font/inter_bold"
         android:textColor="@color/black"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:textStyle="bold" />
-        android:layout_marginTop="305dp"/>
 
 
     <TextView
@@ -75,6 +75,7 @@
         android:layout_marginTop="340dp"
         android:padding="10dp"
         android:text="@string/location"
+        android:fontFamily="@font/inter_regular"
         android:textSize="20sp" />
 
     <TextView
@@ -83,7 +84,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="367dp"
-        android:padding="16dp"
+        android:fontFamily="@font/inter_regular"
+        android:padding="8dp"
         android:text="@string/text_description"
         android:textColor="@color/black"
         android:textSize="19sp" />
@@ -118,6 +120,7 @@
                     android:id="@+id/textPayments_Details"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:fontFamily="@font/roboto_regular"
                     android:text="@string/payment_details"
                     android:textColor="@android:color/black"
                     android:textSize="19sp" />
@@ -142,6 +145,7 @@
                     android:id="@+id/textReferral_Code"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:fontFamily="@font/roboto_regular"
                     android:text="@string/referral_code"
                     android:textColor="@android:color/black"
                     android:textSize="19sp" />
@@ -178,6 +182,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/roboto_regular"
                     android:text="@string/settings"
                     android:textColor="@android:color/black"
                     android:textSize="19sp" />
@@ -203,6 +208,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/roboto_regular"
                     android:text="@string/logout"
                     android:textColor="@android:color/black"
                     android:textSize="19sp" />
