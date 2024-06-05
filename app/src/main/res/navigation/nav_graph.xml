@@ -54,4 +54,12 @@
         android:name="com.uno.tp3parcial.ui.search_result.Search_Result"
         android:label="Search Result"
         tools:layout="@layout/search_result"/>
+        <action
+            android:id="@+id/action_search_to_borocay"
+            app:destination="@id/borocay" />
+    <fragment
+        android:id="@+id/borocay"
+        android:name="com.uno.tp3parcial.ui.borocay.Borocay"
+        android:label="@string/title_settings"
+        tools:layout="@layout/borocay" />
 </navigation>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    card_view:cardCornerRadius="15dp"
+    card_view:cardElevation="4dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="0dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="2"
+                android:textSize="20sp"
+                android:text="EZE"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="2"
+                android:textSize="20sp"
+                android:text="LAX"
+                android:textColor="@android:color/darker_gray" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="0dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="2"
+                android:textSize="20sp"
+                android:text="Ezeiza AR"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="2"
+                android:textSize="20sp"
+                android:text="Los Angeles"
+                android:textColor="@android:color/darker_gray" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/view_details_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:background="@drawable/ic_mastercard" />
+
+
+        <Button
+            android:id="@+id/view_details_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="0dp"
+            android:backgroundTint="@color/orange"
+            android:text="View details"
+            android:textSize="15sp"
+            android:textColor="@color/white">
+
+        </Button>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

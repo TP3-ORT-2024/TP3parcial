@@ -5,7 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.uno.tp3parcial.R
+import com.uno.tp3parcial.ui.search_results.adapter.BorocayAdapter
+import com.uno.tp3parcial.ui.search_results.entities.PhotosBorocay
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -16,6 +20,9 @@ class Borocay : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var borocayAdapter: BorocayAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +37,35 @@ class Borocay : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.borocay, container, false)
+        val view = inflater.inflate(R.layout.borocay, container, false)
+
+        // Initialize the RecyclerView
+        recyclerView = view.findViewById(R.id.recViewBorocay) // Make sure the ID matches your layout
+        recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+
+
+
+        val filipinas1: Int = R.drawable.filipinas1
+        val filipinas2: Int = R.drawable.filipinas2
+        val filipinas3: Int = R.drawable.filipinas3
+
+
+
+        val photos = listOf(
+            PhotosBorocay(filipinas1),
+            PhotosBorocay(filipinas2),
+            PhotosBorocay(filipinas3)
+        )
+
+        // Initialize the adapter
+        borocayAdapter = BorocayAdapter(photos) // Pass an empty list or your data here
+
+        // Set the adapter to the RecyclerView
+        recyclerView.adapter = borocayAdapter
+
+
+        return view
+        //return inflater.inflate(R.layout.borocay, container, false)
     }
 
     companion object {

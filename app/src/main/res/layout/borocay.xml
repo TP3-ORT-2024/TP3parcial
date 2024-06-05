@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.borocay.Borocay">
 
     <androidx.appcompat.widget.Toolbar
@@ -32,6 +33,115 @@
             android:src="@drawable/heart" />
 
     </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/backgroundprofile"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        app:srcCompat="@drawable/background_beach" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Borocay"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_marginTop="270dp"/>
+
+    <TextView
+        android:id="@+id/code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="5D4N"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:background="#B2B2B2"
+        android:layout_marginTop="285dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginEnd="205dp"/>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="$349"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_marginTop="275dp"
+        android:layout_marginStart="290dp"/>
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Phillipines"
+        android:textStyle="italic"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:layout_marginTop="305dp"/>
+
+    <TextView
+        android:id="@+id/overview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Overview"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:layout_marginTop="345dp"/>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Spend 5 daysand 4 nights in one of the best islands in the world! Back in sun while walking in thw white sand beach and enjoy the night partying at the popular seaside bars."
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="380dp"
+        />
+
+    <TextView
+        android:id="@+id/photos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Photos"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:layout_marginTop="470dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recViewBorocay"
+        android:layout_width="match_parent"
+        android:layout_height="219dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="525dp"
+        app:layout_constraintTop_toBottomOf="@+id/photos" />
+
+    <Button
+        android:id="@+id/book_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="650dp"
+        android:backgroundTint="@color/orange"
+        android:text="Book now"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        app:cornerRadius="8dp"
+        app:fontFamily="@font/inter_bold">
+
+    </Button>
 
 
 </FrameLayout>
