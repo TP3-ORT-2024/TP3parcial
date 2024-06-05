@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -68,6 +69,7 @@ class Search_Result : Fragment() {
 
         val searchButton = view2.findViewById<Button>(R.id.view_details_btn)
            searchButton.setOnClickListener {
+               Toast.makeText(context, "click", Toast.LENGTH_SHORT).show()
            findNavController().navigate(R.id.action_search_to_borocay)
         }
 

@@ -60,6 +60,6 @@
     <fragment
         android:id="@+id/borocay"
         android:name="com.uno.tp3parcial.ui.borocay.Borocay"
-        android:label="@string/title_settings"
+        android:label="Borocay"
         tools:layout="@layout/borocay" />
 </navigation>
