@@ -4,9 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.borocay.Borocay">
+    tools:context=".ui.borocay.Borocay"
+    android:theme="@style/Theme.Material3.DayNight.NoActionBar">
 
-    <androidx.appcompat.widget.Toolbar
+<androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -46,7 +47,6 @@
         android:layout_height="wrap_content"
         android:text="Borocay"
         android:padding="8dp"
-        android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="30sp"
         android:layout_marginTop="270dp"/>
@@ -57,7 +57,6 @@
         android:layout_height="wrap_content"
         android:text="5D4N"
         android:padding="8dp"
-        android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="15sp"
         android:background="#B2B2B2"
@@ -71,7 +70,6 @@
         android:layout_height="wrap_content"
         android:text="$349"
         android:padding="8dp"
-        android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="30sp"
         android:layout_marginTop="275dp"
@@ -103,7 +101,6 @@
         android:layout_height="wrap_content"
         android:text="Spend 5 daysand 4 nights in one of the best islands in the world! Back in sun while walking in thw white sand beach and enjoy the night partying at the popular seaside bars."
         android:padding="10dp"
-        android:textColor="@color/black"
         android:textSize="16sp"
         android:layout_marginTop="380dp"
         />
